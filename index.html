@@ -1,0 +1,82 @@
+<!DOCTYPE HTML>
+<html lang="en">
+
+<head>
+    <!--
+    Name: Changming Tan
+    Date: 3/16/2019
+    IT 207
+    URL: http://ctan.greenriverdev.com/207/final/tip-calculator.html
+
+    JavaScript Final Project - Tip Calculator: this website will calculate the tip amount that you may want to tip depending on the total
+    -->
+    <meta charset="UTF-8">
+    <title>Tip Calculator</title>
+
+    <link href="tip-calculator.css" rel="stylesheet" />
+    <style>
+
+    </style>
+</head>
+
+<body>
+    <div id="container">
+        <h1>Tip Calculator</h1>
+
+        <!--calculator-->
+        <div id="calculator">
+            <form>
+                <label>Enter your total bill:
+                    <br>
+                    <input id="totalBill" type="text" placeholder="$ total bill">
+                </label>
+                <span id='errorTotalBill' class='hidden'>*required</span>
+                <br>
+                <br>
+                <label>How was the service?</label>
+                <br>
+                <select id='service'>
+                    <option value='none'>choose tip amount</option>
+                    <option value='0.03'>terrible: 3%</option>
+                    <option value='0.08'>bad: 8%</option>
+                    <option value='0.15'>neutral: 15%</option>
+                    <option value='0.20'>good: 20%</option>
+                    <option value='0.30'>very good: 30%</option>
+                </select>
+                <span id='errorService' class='hidden'>*required</span>
+                <br>
+                <br>
+                <label id='share'>How many people are sharing the bill?
+                    <br>
+                    <input id="people" type="text" placeholder="number of people">
+                </label>
+                <span id='errorShare' class='hidden'>*required</span>
+                <br>
+                <br>
+            </form>
+            <br>
+            <br>
+            <button type="button" id="button">calculate</button>
+            <br>
+            <br>
+            <br>
+            <br>
+        </div>
+
+        <label id='result'>
+            Bill for each person without tip:
+            <p id='billMsg'></p>
+            Net total before tip and WA tax (10.1%):
+            <p id='netMsg'></p>
+            Recommended tip amount per person (based on net total):
+            <p id='tipMsg'></p>
+            Bill for each person with recommended tip:
+            <p id='totalMsg'></p>
+        </label>
+    </div>
+
+    <script src='tip-calculator.js'></script>
+
+</body>
+
+</html>
